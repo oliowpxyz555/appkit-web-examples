@@ -19,7 +19,7 @@ export const signMessage = (provider, address) => {
       return result;
   }
 
-  export const getBalance = async (provider, address, wagmiConfig) => {
+  export const getBalance = async (provider, address) => {
     if (!provider) return Promise.reject('No provider available')
     
       const balance = await provider.request({

@@ -50,7 +50,7 @@ document.getElementById('send-tx')?.addEventListener(
 
 document.getElementById('get-balance')?.addEventListener(
   'click', async () => {
-    const balance = await getBalance(store.eip155Provider, store.accountState.address, wagmiAdapter.wagmiConfig)
+    const balance = await getBalance(store.eip155Provider, store.accountState.address)
     
     document.getElementById('balanceState').innerHTML = balance + ' ETH'
     document.getElementById('balanceSection').style.display = ''
