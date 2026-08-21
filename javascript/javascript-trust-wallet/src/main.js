@@ -40,7 +40,7 @@ document.getElementById('sign-message')?.addEventListener(
 
 document.getElementById('send-tx')?.addEventListener(
   'click', async () => {
-    const tx = await sendTx(store.eip155Provider, store.accountState.address, wagmiAdapter.wagmiConfig)
+    const tx = await sendTx(store.accountState.address, wagmiAdapter.wagmiConfig)
     
 
     document.getElementById('txState').innerHTML = JSON.stringify(tx, null, 2)

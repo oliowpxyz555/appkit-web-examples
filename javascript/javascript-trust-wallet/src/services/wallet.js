@@ -10,9 +10,7 @@ export const signMessage = (provider, address) => {
     })
   }
 
-  export const sendTx = async (provider, address, wagmiConfig) => {
-    if (!provider) return Promise.reject('No provider available')
-
+  export const sendTx = async (address, wagmiConfig) => {
       const result = await sendTransaction(wagmiConfig, {
         to: address,
         value: parseEther("0.0001"),
