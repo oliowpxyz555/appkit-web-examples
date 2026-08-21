@@ -3,7 +3,7 @@ import { bsc, mainnet } from '@reown/appkit/networks'
 import { store } from './store/appkitStore'
 import { updateTheme, updateButtonVisibility } from './utils/dom'
 import { signMessage, sendTx, getBalance } from './services/wallet'
-import { initializeSubscribers } from './utils/suscribers'
+import { initializeSubscribers } from './utils/subscribers'
 
 // Initialize subscribers
 initializeSubscribers(appKit)

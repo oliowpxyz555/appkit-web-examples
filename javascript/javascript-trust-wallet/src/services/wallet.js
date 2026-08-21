@@ -1,6 +1,5 @@
 import { parseEther, formatUnits, toHex } from 'viem'
-import { sendTransaction, getBalance as getBalanceWagmi} from '@wagmi/core'
-import {createWalletClient} from 'viem'
+import { sendTransaction } from '@wagmi/core'
 
 export const signMessage = (provider, address) => {
     if (!provider) return Promise.reject('No provider available')
@@ -11,10 +10,10 @@ export const signMessage = (provider, address) => {
     })
   }
 
-  export const sendTx = async (provider, address, wagmiAdapter) => {
+  export const sendTx = async (provider, address, wagmiConfig) => {
     if (!provider) return Promise.reject('No provider available')
 
-      const result = await sendTransaction(wagmiAdapter.wagmiConfig, {
+      const result = await sendTransaction(wagmiConfig, {
         to: address,
         value: parseEther("0.0001"),
       })
