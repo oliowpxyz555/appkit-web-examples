@@ -1,5 +1,5 @@
 import { store, updateStore } from '../store/appkitStore'
-import { updateStateDisplay, updateTheme, updateButtonVisibility } from '../utils/dom'
+import { updateStateDisplay, updateButtonVisibility } from '../utils/dom'
 import { bsc } from '@reown/appkit/networks'
 
 export const initializeSubscribers = (modal) => {
