@@ -1,4 +1,5 @@
 import { appKit, wagmiAdapter } from './config/appKit'
+import { bsc, mainnet } from '@reown/appkit/networks'
 import { store } from './store/appkitStore'
 import { updateTheme, updateButtonVisibility } from './utils/dom'
 import { signMessage, sendTx, getBalance } from './services/wallet'
@@ -24,7 +25,7 @@ document.getElementById('disconnect')?.addEventListener(
 document.getElementById('switch-network')?.addEventListener(
   'click', () => {
     const currentChainId = store.networkState?.chainId
-    appKit.switchNetwork(currentChainId === polygon.id ? mainnet : polygon)
+    appKit.switchNetwork(currentChainId === bsc.id ? mainnet : bsc)
   }
 )
 

@@ -1,6 +1,6 @@
-# Reown AppKit Example using wagmi (Vite + JavaScript)
+# Reown AppKit Trust Wallet Example (Vite + JavaScript)
 
-This is a [Vite](https://vitejs.dev) project using vanilla JavaScript with the wagmi adapter for multi-chain EVM support.
+This isolated [Vite](https://vitejs.dev) example is optimized for Trust Wallet. It supports Trust Wallet's injected browser provider and WalletConnect browser flow on Ethereum, Arbitrum, Base, and BNB Smart Chain.
 
 ## Usage
 
@@ -9,7 +9,9 @@ This is a [Vite](https://vitejs.dev) project using vanilla JavaScript with the w
 3. Rename `.env.example` to `.env` and paste your `Project ID` as the value for `VITE_PROJECT_ID`
 4. Run `pnpm install` to install dependencies
 5. Run `pnpm run dev` to start the development server
-6. Test it at https://react-wallet.reown.com/
+6. Test it at the local Vite URL
+
+Trust Wallet's browser extension is detected through `window.trustwallet` (with `window.ethereum` as a compatibility fallback). The injected connector is explicitly named Trust Wallet so it remains identifiable when other browser wallets are installed.
 
 ## Resources
 

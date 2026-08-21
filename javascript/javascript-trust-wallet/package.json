@@ -1,9 +1,9 @@
 {
-  "name": "vanilljs-wagmi",
+  "name": "javascript-appkit-trust-wallet",
   "private": true,
   "version": "0.0.1",
   "scripts": {
-    "dev": "vite --port 3011",
+    "dev": "vite --port 3012",
     "build": "vite build"
   },
   "dependencies": {
